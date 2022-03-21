@@ -7,7 +7,7 @@ export class UserPage {
     return res.data;
   }
   async fetchUsers() {
-    return await this.get<User[]>('https://jsonplaceholder.typicode.com/users');
+    return await this.get<User[]>('http://localhost:3000/users');
   }
   async render() {
     const users = await this.fetchUsers();
