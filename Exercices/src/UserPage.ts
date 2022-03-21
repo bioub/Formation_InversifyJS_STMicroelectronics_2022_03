@@ -1,5 +1,8 @@
+import { injectable } from 'inversify';
 import { UserService } from './UserService';
 
+
+@injectable()
 export class UserPage {
   constructor(private userService: UserService) {}
   async render() {

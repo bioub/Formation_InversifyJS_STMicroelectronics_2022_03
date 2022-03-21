@@ -1,5 +1,7 @@
+import { injectable } from 'inversify';
 import { HttpClientInterface } from './HttpClientInterface';
 
+@injectable()
 export class FakeHttpClient implements HttpClientInterface {
   private data!: any;
   async get(url: string) {
